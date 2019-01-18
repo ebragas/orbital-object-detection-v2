@@ -1,0 +1,8 @@
+# Python Compiled
+*.pyc
+
+# Virtual Envs
+env-py27
+
+# Visual Studio Code
+.vscode

@@ -28,7 +28,8 @@ resources:
     # The properties of the resource depend on the type of resource. For a list
     # of properties, see the API reference for the resource.
     zone: us-central1-f
-    machineType: https://www.googleapis.com/compute/v1/projects/reliable-realm-222318/zones/us-central1-f/machineTypes/f1-micro
+    # Replace [MY_PROJECT] with your project ID
+    machineType: https://www.googleapis.com/compute/v1/projects/[MY_PROJECT]/zones/us-central1-f/machineTypes/f1-micro
     disks:
     - deviceName: boot
       type: PERSISTENT
@@ -37,9 +38,10 @@ resources:
       initializeParams:
         # Replace [FAMILY_NAME] with the image family name.
         # See a full list of image families at https://cloud.google.com/compute/docs/images#os-compute-support
-        sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-9
+        sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/[FAMILY_NAME]
+    # Replace [MY_PROJECT] with your project ID
     networkInterfaces:
-    - network: https://www.googleapis.com/compute/v1/projects/reliable-realm-222318/global/networks/default
+    - network: https://www.googleapis.com/compute/v1/projects/[MY_PROJECT]/global/networks/default
       # Access Config required to give the instance a public IP address
       accessConfigs:
       - name: External NAT

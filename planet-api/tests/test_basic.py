@@ -1,15 +1,16 @@
 import unittest
 from planet.planet import Client
 
-class TestPlanetClientMethods(unittest.TestCase):
 
+class TestPlanetClient(unittest.TestCase):
     def setUp(self):
         self.client = Client()
 
+    def test_api_key(self):
+        self.assertIsNotNone(self.client._key)
+
     def test_hello_world(self):
         self.assertEqual(self.client.hello_world(), "Hello, World!")
-
-    def test_hello_world2(self):
         self.assertEqual(self.client.hello_world("Eric"), "Hello, Eric!")
 
 

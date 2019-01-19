@@ -1,9 +1,11 @@
 """Wrapper for Planet API"""
 
+import os
+
 class Client(object):
 
     def __init__(self):
-        pass
+        self._key = os.environ['PL_API_KEY']
 
     def hello_world(self, name=None):
         """Hello World test function"""

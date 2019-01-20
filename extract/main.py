@@ -1,9 +1,14 @@
-from planet.planet import Client
+from planet.planet import Client, Filter, Item
 
 
 def run(c):
-    print(c.hello_world("Eric"))
-    print(c.list_asset_types())
+
+    # Quick Search
+    filter_def = Filter(
+        "/Users/ericbragas/dev/orbital-object-detection-v2/extract/planet/sample-geojson/sf_bay.json",
+        0.5,
+    )
+    results = c.quick_search(filter_def, ["REOrthoTile"])
     return
 
 

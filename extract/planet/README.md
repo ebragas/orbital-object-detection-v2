@@ -1,0 +1,1 @@
+Python 3.7 used since target for deployment is Google Cloud Functions.

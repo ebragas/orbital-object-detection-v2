@@ -3,6 +3,7 @@
 
 # Virtual Envs
 env-py27
+env-py37
 
 # Visual Studio Code
 .vscode
